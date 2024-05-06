@@ -87,10 +87,44 @@
       ]
     },
     {
+      "name": "maplibre-gl-native-qt",
+      "buildsystem": "cmake-ninja",
+      "config-opts": [
+        "-DMLN_QT_WITH_WIDGETS=OFF",
+        "-DMLN_QT_WITH_LOCATION=OFF",
+        "-DMLN_QT_WITH_INTERNAL_ICU=ON"
+      ],
+      "post-install": [
+        "ln -s /app/include/qt5/* /app/include"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/maplibre/maplibre-native-qt.git",
+          "commit": "85673cbe94d6ec0d9e7a35952375c24cb5f51589",
+          "disable-shallow-clone": true
+        }
+      ]
+    },
+    {
+      "name": "mapbox-gl-qml",
+      "buildsystem": "cmake-ninja",
+      "config-opts": [
+        "-DQT_INSTALL_QML=/app/lib/qml"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/rinigus/mapbox-gl-qml.git",
+          "commit": "0ad5328c47cb717e42bbad49e6261808de8750a0"
+        }
+      ]
+    },
+    {
       "name": "harbour-amazfish",
       "buildsystem": "qmake",
       "config-opts": [
-        "FLAVOR=qtcontrols",
+        "FLAVOR=kirigami",
         "DISABLE_SYSTEMD=yes"
       ],
       "build-options": {
@@ -104,7 +138,6 @@
         "install -Dm644 ui/harbour-amazfish-ui.appdata.xml /app/share/appdata/harbour-amazfish-ui.appdata.xml",
         "desktop-file-edit --set-key=Exec --set-value='run-amazfish.sh' /app/share/applications/harbour-amazfish-ui.desktop"
       ],
-
       "sources": [
         {
           "type": "git",
