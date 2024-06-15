@@ -142,7 +142,7 @@
         {
           "type": "git",
           "url": "https://github.com/piggz/harbour-amazfish.git",
-          "tag": "2.2.8"
+          "tag": "2.3.0"
         },
         {
           "type": "file",
