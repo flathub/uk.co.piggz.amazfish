@@ -122,16 +122,11 @@
     },
     {
       "name": "harbour-amazfish",
-      "buildsystem": "qmake",
+      "buildsystem": "cmake-ninja",
       "config-opts": [
-        "FLAVOR=kirigami",
-        "DISABLE_SYSTEMD=yes"
+        "-DFLAVOR=kirigami",
+        "-DDISABLE_SYSTEMD=yes"
       ],
-      "build-options": {
-        "env": [
-          "QMAKEPATH=/app"
-        ]
-      },
       "post-install": [
         "install -Dm755 run-amazfish.sh /app/bin/run-amazfish.sh",
         "install -Dm644 ui/icons/128x128/harbour-amazfish-ui.png /app/share/icons/hicolor/128x128/apps/harbour-amazfish-ui.png",
@@ -142,7 +137,7 @@
         {
           "type": "git",
           "url": "https://github.com/piggz/harbour-amazfish.git",
-          "commit": "847a2b9b7082de6b149e5e2a379f3b9523864220"
+          "tag": "2.6.0"
         },
         {
           "type": "file",
