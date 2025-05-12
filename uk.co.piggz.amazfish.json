@@ -1,7 +1,7 @@
 {
   "app-id": "uk.co.piggz.amazfish",
   "runtime": "org.kde.Platform",
-  "runtime-version": "5.15-23.08",
+  "runtime-version": "5.15-24.08",
   "sdk": "org.kde.Sdk",
   "command": "run-amazfish.sh",
   "rename-icon": "harbour-amazfish-ui",
@@ -68,17 +68,9 @@
       ],
       "sources": [
         {
-          "type": "archive",
-          "url": "https://invent.kde.org/libraries/kdb/-/archive/tags/v3.2.0/kdb-v3.2.0.tar.gz",
-          "sha256": "3a5c660f0080c6971ac1046be84a0accd86a5296e9df4c585b1b91361b5eed20"
-        },
-        {
-          "type": "patch",
-          "path": "6.patch"
-        },
-        {
-          "type": "patch",
-          "path": "upstream_Fix-build-with-newer-Qt.patch"
+          "type": "git",
+          "url": "https://invent.kde.org/libraries/kdb.git",
+          "commit": "337c56f84010efdb1189bffae380e80ad97c7b10"
         },
         {
           "type": "patch",
