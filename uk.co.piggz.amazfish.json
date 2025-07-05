@@ -30,8 +30,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/sailfishos/nemo-qml-plugin-dbus/archive/refs/tags/2.1.33.tar.gz",
-          "sha256": "08d1bdc5eac5eba2197f2c1e04a7e851437724331215059db1d68828dbf3b0a8"
+          "url": "https://github.com/sailfishos/nemo-qml-plugin-dbus/archive/refs/tags/2.1.38.tar.gz",
+          "sha256": "201bdbe1c1eac81e572483af4f5f3558e2e932fc217dc53daa8a425d99d64263"
         },
         {
           "type": "patch",
