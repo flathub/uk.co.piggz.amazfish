@@ -84,7 +84,8 @@
       "config-opts": [
         "-DMLN_QT_WITH_WIDGETS=OFF",
         "-DMLN_QT_WITH_LOCATION=OFF",
-        "-DMLN_QT_WITH_INTERNAL_ICU=ON"
+        "-DMLN_QT_WITH_INTERNAL_ICU=ON",
+        "-DCMAKE_INSTALL_LIBDIR=lib"
       ],
       "post-install": [
         "ln -s /app/include/qt5/* /app/include"
