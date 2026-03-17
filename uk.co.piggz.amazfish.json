@@ -19,14 +19,19 @@
     "--talk-name=io.github.rinigus.PureMaps",
     "--talk-name=org.freedesktop.Notifications"
   ],
+  "cleanup": [
+    "/include",
+    "/lib/cmake",
+    "/lib/pkgconfig",
+    "/mkspecs",
+    "/share/qt5/mkspecs",
+    "*.a"
+  ],
   "modules": [
     {
       "name": "nemo-qml-plugin-dbus",
       "buildsystem": "qmake",
       "builddir": true,
-      "cleanup": [
-        "/include"
-      ],
       "sources": [
         {
           "type": "archive",
@@ -43,9 +48,6 @@
       "name": "qtmpris",
       "buildsystem": "qmake",
       "builddir": true,
-      "cleanup": [
-        "/include"
-      ],
       "sources": [
         {
           "type": "archive",
@@ -62,10 +64,6 @@
       "name": "libkdb3",
       "buildsystem": "cmake-ninja",
       "builddir": true,
-      "cleanup": [
-        "/include",
-        "/mkspecs"
-      ],
       "sources": [
         {
           "type": "git",
@@ -86,9 +84,6 @@
         "-DMLN_QT_WITH_LOCATION=OFF",
         "-DMLN_QT_WITH_INTERNAL_ICU=ON",
         "-DCMAKE_INSTALL_LIBDIR=lib"
-      ],
-      "post-install": [
-        "ln -s /app/include/qt5/* /app/include"
       ],
       "sources": [
         {
