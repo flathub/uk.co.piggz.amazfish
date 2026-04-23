@@ -82,6 +82,9 @@
     {
       "name": "maplibre-gl-native-qt",
       "buildsystem": "cmake-ninja",
+      "build-options": {
+          "cxxflags": "-std=gnu++14"
+      },      
       "config-opts": [
         "-DMLN_QT_WITH_WIDGETS=OFF",
         "-DMLN_QT_WITH_LOCATION=OFF",
