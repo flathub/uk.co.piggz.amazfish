@@ -1,7 +1,7 @@
 {
   "app-id": "uk.co.piggz.amazfish",
   "runtime": "org.kde.Platform",
-  "runtime-version": "5.15-24.08",
+  "runtime-version": "5.15-25.08",
   "sdk": "org.kde.Sdk",
   "command": "run-amazfish.sh",
   "rename-icon": "harbour-amazfish-ui",
@@ -125,7 +125,8 @@
         {
           "type": "git",
           "url": "https://github.com/piggz/harbour-amazfish.git",
-          "tag": "2.9.0"
+          "tag": "2.9.0",
+          "commit": "3936c198d0eface6dbef14dd14708ebe838626d8"
         },
         {
           "type": "file",
