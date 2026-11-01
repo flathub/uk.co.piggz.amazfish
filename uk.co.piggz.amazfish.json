@@ -1,7 +1,7 @@
 {
   "app-id": "uk.co.piggz.amazfish",
   "runtime": "org.kde.Platform",
-  "runtime-version": "5.15-24.08",
+  "runtime-version": "5.15-25.08",
   "sdk": "org.kde.Sdk",
   "command": "run-amazfish.sh",
   "rename-icon": "harbour-amazfish-ui",
@@ -74,6 +74,9 @@
           "type": "patch",
           "path": "libkdb3-features.patch"
         }
+      ],
+      "config-opts": [
+        "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
       ]
     },
     {
@@ -83,15 +86,19 @@
         "-DMLN_QT_WITH_WIDGETS=OFF",
         "-DMLN_QT_WITH_LOCATION=OFF",
         "-DMLN_QT_WITH_INTERNAL_ICU=ON",
-        "-DCMAKE_INSTALL_LIBDIR=lib"
+        "-DCMAKE_INSTALL_LIBDIR=lib",
+        "-DMLN_WITH_WERROR=OFF"
       ],
       "sources": [
         {
           "type": "git",
           "url": "https://github.com/maplibre/maplibre-native-qt.git",
-          "commit": "85673cbe94d6ec0d9e7a35952375c24cb5f51589",
+          "commit": "e7114dec7f504b26b9f6acbc2a94645bc0535bd6",
           "disable-shallow-clone": true
         }
+      ],
+      "post-install": [
+        "ln -s /app/include/qt5/* /app/include"
       ]
     },
     {
@@ -104,7 +111,7 @@
         {
           "type": "git",
           "url": "https://github.com/rinigus/mapbox-gl-qml.git",
-          "commit": "0ad5328c47cb717e42bbad49e6261808de8750a0"
+          "commit": "7cb85afbf26369db3698ff34af84436cb0d897e7"
         }
       ]
     },
