@@ -45,18 +45,18 @@
       ]
     },
     {
-      "name": "qtmpris",
+      "name": "amber-mpris",
       "buildsystem": "qmake",
       "builddir": true,
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/sailfishos/qtmpris/archive/refs/tags/1.0.6.tar.gz",
-          "sha256": "384eac76ec7d29d1de6fa93c45007ccd506d6cc0e4c69e19d4250e16cc0f34a2"
+          "url": "https://github.com/sailfishos/amber-mpris/archive/refs/tags/1.2.10.tar.gz",
+          "sha256": "a01e38f85c1e88e7db9342672e4588164676fbbccf4d084071eda17fb0ec9014"
         },
         {
           "type": "patch",
-          "path": "qtmpris-qmake.patch"
+          "path": "amber-mpris-qmake.patch"
         }
       ]
     },
@@ -132,7 +132,8 @@
         {
           "type": "git",
           "url": "https://github.com/piggz/harbour-amazfish.git",
-          "tag": "2.9.0"
+          "tag": "3.0.0",
+          "commit": "db99ad36eb0d76cec1be03625f4bcbf068eb0dbe"
         },
         {
           "type": "file",
