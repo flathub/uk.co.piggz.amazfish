@@ -132,8 +132,8 @@
         {
           "type": "git",
           "url": "https://github.com/piggz/harbour-amazfish.git",
-          "tag": "3.0.0",
-          "commit": "db99ad36eb0d76cec1be03625f4bcbf068eb0dbe"
+          "tag": "3.0.1",
+          "commit": "1ed1b6beb1a87e06ec7c4f5a0aeaaea37672d883"
         },
         {
           "type": "file",
